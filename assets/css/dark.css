@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(52, 51, 51);
+}
+*{
+    scrollbar-color: rgb(110, 90, 15) #ffffff;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(110, 90, 15);
+    border-color: #000000;
+}
+.todo_object{
+    background-color:rgb(110, 90, 15);
+}
+.list{
+    background-color:rgb(100, 81, 14);
+}
+.input{
+    background-color: rgb(29, 29, 135);
+}
+*{
+    color:white;
+}
+button, input,textarea{
+    background-color: rgb(52, 51, 51);
+}
+.add_item{
+    background-color: rgb(80, 80, 124);
+}
+.complete{
+    color:rgb(146, 146, 146);
+}
+.undone{
+    color:rgb(255, 255, 255);
+}
+.date{
+    color: rgb(99, 99, 235);
+}
+.missingdate{
+    color: rgb(233, 143, 143);
+}
+.activeTab{
+    background-color: rgb(58, 58, 97);
+}

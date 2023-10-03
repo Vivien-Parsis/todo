@@ -1,0 +1,146 @@
+@font-face{
+    font-family: "montserrat";
+    src: url('../font/Montserrat-Regular.ttf');
+  }
+*{
+    scrollbar-width: auto;
+    scrollbar-color: rgb(255, 220, 171) #ffffff;
+}
+*::-webkit-scrollbar{
+    width: 8px;
+}
+*::-webkit-scrollbar-track{
+    background: #ffffff00;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 220, 171);
+    border: 2px solid #000000;
+}
+*{
+    font-family: montserrat;
+    font-feature-settings: "ss01";
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+body{
+    margin:0;
+}
+h1{
+    text-align: center;
+}
+.darktoggle{
+    margin:0 0 1% 1%;
+    border:none;
+    background-color: rgba(0,0,0,0);
+}
+.darktoggle img{
+    width: 2.5em;
+}
+.dark *{
+    color:white;
+}
+.todo_object{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:1% 0;
+    background-color:rgb(255, 220, 171);
+    padding:.3vw;
+    text-align: justify;
+}
+.list{
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+    background-color:rgb(252, 222, 181);
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.search{
+    margin: 1% 0 1% 1%;
+}
+.add_item{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(194, 194, 251);
+    margin: 1%;
+    padding:.3vw;
+    width: fit-content;
+    border-radius: 1vh;
+    border:2px black solid;
+}
+input{
+    border-radius: 0;
+}
+.success{
+    color:blue;
+    font-weight:bold;
+}
+.missing{
+    color:red;
+    font-style:oblique;
+}
+.allDone{
+    margin:1%;
+    font-weight: bold;
+}
+.button{
+    margin:1%;
+}
+.button_add{
+    margin:1% 0;
+}
+.modify{
+    margin:.5% 0 0;
+}
+.modify_input{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.date{
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(15, 15, 101);
+}
+.missingdate{
+    font-weight: bold;
+    color: rgb(148, 33, 33);
+}
+.complete{
+    color:rgb(93, 68, 68);
+}
+.undone{
+    color:rgb(57, 36, 36);
+    font-weight: bold;
+}
+.tab{
+    margin:0;
+    padding:0.5% 1%;
+    width: 98%;
+}
+.todo{
+    padding: 0.5% 0 0;
+}
+.activeTab{
+    background-color: rgb(211, 211, 255);
+}
+.modifyTab{
+    margin:0% 0% 0% 1%;
+}
+.upButton,.downButton{
+    border-radius: 100%;
+}
+.alert_img{
+    width: 1.5em;
+}
+.textarea_objectif{
+    resize: vertical;
+}
