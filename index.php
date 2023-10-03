@@ -5,13 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>todo list</title>
         <link rel="stylesheet" href="assets/css/todo.css" type="text/css">
+        <link rel="icon" href="icon.ico">
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-        <script defer src="//unpkg.com/alpinejs"></script>
+        <script defer src="https://unpkg.com/alpinejs"></script>
         <script src="todo.js"></script>
     </head>
     <body>
+        <?php require_once("../component/nav.php");?>
         <header>
             <div x-data="darkmod">
                 <button class="darktoggle" @click="darktoggle()">
@@ -43,8 +45,8 @@
                                 <input type="button" value="↓" @click="down(contents.id)" x-show="getArrayIndex(contents.id)!=content.length-1" class="downButton">
                                 <input type="checkbox" x-model="contents.check">
                                 <span :class="alertDate(contents.echeance) && !contents.check ? 'missingdate' : 'date'" x-text="contents.echeance"></span>
-                                <img src="assets/image/alert.png" x-show="alertDate(contents.echeance) && !contents.check" class="alert_img"><br>
-                                <span x-html="contents.objectif" :class="contents.check ? 'complete' : 'undone'"></span>
+                                <img src="assets/image/alert.png" x-show="alertDate(contents.echeance) && !contents.check" class="alert_img">
+                                <span x-html="contents.objectif" :class="contents.check ? 'complete' : 'undone'" class="todo_objectif"></span>
                                 <div class="modify" x-data="modify">
                                     <input type="button" value="Supprimer" @click="removeitem(`${contents.id}`)">
                                     <input type="button" value="modifier" @click="showmodify=!showmodify">
@@ -66,10 +68,10 @@
                     <span x-ref="allDone" :class="content.length==0 ? 'allDone missing' : allDone ? 'allDone success' : 'allDone missing'"></span></span>
                     <br>
                     <input type="button" @click="clearStorage()" class="button" value="effacer tout">
-                    <br>
                     <input type="button" @click="defaultStorage()" value="todo list par défaut" class="button">
                 </div>
             </template>
         </div>
+        <?php require_once('../component/footer.php')?>
     </body>
 </html>

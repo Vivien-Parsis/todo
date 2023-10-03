@@ -24,7 +24,6 @@ document.addEventListener('alpine:init', () => {
                 }
             },
             removeTab(tabToDelete){
-                //this.$persist(null).as(`todo${tabToDelete}`);
                 window.localStorage.removeItem(`todo${tabToDelete}`);
                 this.tab.splice(this.tab.indexOf(tabToDelete),1);
                 this.switchTab(this.tab[0]);
@@ -38,7 +37,6 @@ document.addEventListener('alpine:init', () => {
                             break;
                         }
                     }
-                    
                 }
                 this.$refs.newTab.value="";
             }
@@ -102,7 +100,7 @@ document.addEventListener('alpine:init', () => {
                         echeance : "09/12/2023",
                         objectif : "Sed tortor enim, consectetur ac bibendum ac, congue et mauris. Sed consectetur augue dignissim dictum sagittis. Cras odio est, dictum sit amet feugiat non, ultrices eget neque. Pellentesque semper lacus et odio vehicula aliquam. Phasellus euismod tellus nunc, vel hendrerit eros condimentum non. Nulla aliquam, arcu sed tempus sollicitudin, sem massa interdum massa, ultricies volutpat dolor eros a urna. Vivamus tincidunt sit amet sem at condimentum. Sed rhoncus est tellus."  
                     }
-                ]},
+            ]},
             filtredItems(){ 
                 return this.content.filter((i)=>i.objectif.startsWith(this.search));
             },

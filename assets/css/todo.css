@@ -21,20 +21,26 @@
     font-feature-settings: "ss01";
 }
 header{
+    background-color: #ecebeb;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 body{
     margin:0;
+    background-color: rgb(216, 202, 202);
 }
 h1{
     text-align: center;
 }
 .darktoggle{
-    margin:0 0 1% 1%;
+    margin-right:0;
     border:none;
     background-color: rgba(0,0,0,0);
+}
+.darktoggle:hover{
+    background-color: rgba(0, 0, 0, 0.219);
 }
 .darktoggle img{
     width: 2.5em;
@@ -51,6 +57,9 @@ h1{
     background-color:rgb(255, 220, 171);
     padding:.3vw;
     text-align: justify;
+}
+.todo_objectif{
+    width: 100%;
 }
 .list{
     width:100%;
@@ -72,11 +81,13 @@ h1{
     margin: 1%;
     padding:.3vw;
     width: fit-content;
-    border-radius: 1vh;
     border:2px black solid;
 }
 input{
     border-radius: 0;
+}
+input[type=button],input[type=checkbox],.darktoggle{
+    cursor:pointer;
 }
 .success{
     color:blue;
@@ -123,7 +134,8 @@ input{
 }
 .tab{
     margin:0;
-    padding:0.5% 1%;
+    border-top: 2px solid black;
+    padding:1% 1% .5%;
     width: 98%;
 }
 .todo{

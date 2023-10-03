@@ -41,3 +41,6 @@ button, input,textarea{
 .activeTab{
     background-color: rgb(58, 58, 97);
 }
+header{
+    background-color: #2e2e2e;
+}
